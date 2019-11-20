@@ -1,8 +1,8 @@
 # family-ui
 UI для семейного архива
 
-## Примеры
+Примеры страниц:
 
-### Рабочая область
-
-![Рабочая область](./template/tree.png)
+* [Граф](./template/tree.md)
+* [Биография](./template/bio.md)
+* [Карта](./template/map.md)
