@@ -7,5 +7,8 @@ UI для семейного архива.
 * [Граф](./docs/tree.md)
 * [Биография](./docs/bio.md)
 * [Карта](./docs/map.md)
-* [Галерея](./docs/gallery.md)
+
+* Галерея
+** [Обзор всех фото](./docs/gallery.md)
+** [Обзор фронтальной стороны фотографии](./docs/gallery-view-front.md)
 
