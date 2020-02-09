@@ -13,3 +13,4 @@ UI для семейного архива.
   * [Обзор фронтальной стороны фотографии](./docs/gallery-view-front.md)
   * [Обзор обратной стороны фотографии](./docs/gallery-view-back.md)
 
+* Документация на [Create Reac App](./docs/cra.md)
