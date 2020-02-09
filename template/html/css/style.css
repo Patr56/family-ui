@@ -1,0 +1,266 @@
+* > * {
+  /*border: 1px solid grey;*/
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap");
+
+.html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/bg.svg);
+  background-size: 20em;
+  text-align: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.layout {
+  display: inline-block;
+  text-align: right;
+  width: 64em;
+  font-size: 1em;
+  height: 100%;
+
+  border-left: 1px solid rgba(0, 0, 0, 0.20);
+  border-right: 1px solid rgba(0, 0, 0, 0.20);
+  background-color: rgba(0, 0, 0, 0.10);
+
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+.header {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  float: left;
+  width: 43em;
+  height: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.main__full {
+  width: 100%;
+}
+
+.nav {
+  display: inline-block;
+  position: relative;
+}
+
+.nav_wrapper {
+  display: inline-block;
+  position: relative;
+  width: 20em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  overflow: hidden;
+  background-color: rgba(232, 232, 232, 0.78);
+}
+
+.nav_wrapper__hide {
+  display: none;
+}
+
+.nav_tab {
+  position: absolute;
+  text-align: right;
+  top: -1em;
+  right: 21em;
+  transform: rotate(270deg);
+  transform-origin: right;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.nav_tab::before {
+  content: '';
+  position: relative;
+  top: -1.5em;
+  border-bottom: 2em solid rgba(232, 232, 232, 0.78);
+  border-left: 2em solid transparent;
+}
+
+.nav_tab__hide {
+  top: -2em;
+  right: 1em;
+}
+
+.tab {
+  display: inline-block;
+  cursor: pointer;
+  background-color: rgba(232, 232, 232, 0.78);;
+  line-height: 2em;
+  padding: 0 2em;
+}
+
+.tab_text {
+  display: inline-block;
+  padding: 0;
+}
+
+.info {
+  text-align: center;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.info_fio {
+  padding: 0;
+  margin: 0;
+}
+
+.info_lastname {
+  font-size: 1.4em;
+  padding: 0;
+  margin: 0;
+}
+
+.info_firstname {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.info_life {
+  padding: 2em 0 0 0;
+  margin: 0;
+}
+
+.info_age {
+  font-size: 1.4em;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu_item {
+  vertical-align: bottom;
+  padding: 1em;
+  margin: 0;
+}
+
+.menu_item__active {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+.menu_logo {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  filter: drop-shadow(-1px 3px 2px rgba(0, 0, 0, 0.57));
+  margin: 0;
+  padding: 0;
+}
+
+.menu_logo__book {
+  background-image: url(../assets/book-open-solid.svg);
+}
+
+.menu_logo__gallery {
+  background-image: url(../assets/images-solid.svg);
+}
+
+.menu_logo__map {
+  background-image: url(../assets/map-solid.svg);
+}
+
+.menu_logo__phone {
+  background-image: url(../assets/mobile-alt-solid.svg);
+  background-position-x: 0.5em;
+}
+
+.menu_logo__email {
+  background-image: url(../assets/at-solid.svg);
+}
+
+.menu_logo__date {
+  background-image: url(../assets/calendar-alt-solid.svg);
+  background-position-x: 0.2em;
+}
+
+.menu_item-name {
+  display: inline-block;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0 0 0 1em;
+  width: 80%;
+}
+
+.menu_item-name-descripton {
+  font-weight: normal;
+  font-size: 1.4em;
+  padding: 0.3em 0 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info_logo {
+  display: inline-block;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.avatar {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 8em;
+  height: 8em;
+  overflow: hidden;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(-1px 3px 2px rgba(0, 0, 0, 0.57));
+}
+
+.link {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link:hover {
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.57);
+  cursor: pointer;
+}
+
+/* unvisited link */
+.link:link {
+  color: #000;
+}
+
+/* visited link */
+.link:visited {
+  color: #000;
+}
+
+/* selected link */
+.link:active {
+  color: gray;
+}
