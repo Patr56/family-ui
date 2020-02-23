@@ -1,6 +1,9 @@
 name: family-ui CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -18,8 +21,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm run build
+    - run: npm run build | cp ./CNAME ./build/CNAME
     - run: npm test
+    - name: GitHub Pages Deploy
+      uses: peaceiris/actions-gh-pages@v3.2.0
+      deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+      publish_dir: ./build
+      allow_empty_commit: true
+      publish_branch: gh-pages # deploying branch
   
       env:
         CI: true
