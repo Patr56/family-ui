@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import { NavLink } from "react-router-dom";
 
 import { IItemMenu, EType } from '../../../models/Models';
 
@@ -23,39 +24,39 @@ const widgetHandlers: { [key in EType]: IItem } = {
     [EType.BIO]: {
         className: 'menu_logo__book',
         ItemWidget: (props) => {
-            return <a className="link" href="#none" title={props.item.title}>{props.children}</a>
+            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/bio/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
         }
     },
     [EType.GALLERY]: {
         className: 'menu_logo__gallery',
         ItemWidget: (props) => {
-            return <a className="link" href="#none" title={props.item.title}>{props.children}</a>
+            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/gallery/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
         },
         descriptionConverter: (d) => `${d} шт.`
     },
     [EType.MAP]: {
         className: 'menu_logo__map',
         ItemWidget: (props) => {
-            return <a className="link" href="#none" title={props.item.title}>{props.children}</a>
+            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/map/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
         }
     },
     [EType.PHONE]: {
         className: 'menu_logo__phone',
         ItemWidget: (props) => {
-            return <a className="link" href={`tel:${props.item.description}`} title={props.item.title}>{props.children}</a>
+            return <a className="menu_wrapper link" href={`tel:${props.item.description}`} title={props.item.title}>{props.children}</a>
         },
         descriptionConverter: (d) => d.replace(/(\d)(\d\d\d)(\d\d\d)(\d\d\d\d)/, '$1 ($2) $3 $4')
     },
     [EType.EMAIL]: {
         className: 'menu_logo__email',
         ItemWidget: (props) => {
-            return <a className="link" href={`mailto:${props.item.description}`} title={props.item.title}>{props.children}</a>
+            return <a className="menu_wrapper link" href={`mailto:${props.item.description}`} title={props.item.title}>{props.children}</a>
         },
     },
     [EType.DATE]: {
         className: 'menu_logo__date',
         ItemWidget: (props) => {
-            return <a className="link" href="#none" title={props.item.title}>{props.children}</a>
+            return <a className="menu_wrapper link" href="#none" title={props.item.title}>{props.children}</a>
         },
     }
 }

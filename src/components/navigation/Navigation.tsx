@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Avatar from '../avatar/Avatar';
 import NavigationMenu from '../navigation/menu/NavigationMenu';
@@ -6,6 +7,7 @@ import NavigationMenu from '../navigation/menu/NavigationMenu';
 import { IItemMenu, EType } from '../../models/Models';
 
 import './Navigation.css';
+
 
 const items: IItemMenu[] = [
   {
@@ -69,15 +71,15 @@ const Navigation = () => {
 
       <div className="nav_wrapper">
         <div className="info">
-          <a
+          <NavLink
             className="link"
-            href="./index.html"
+            to="/"
             title="Моисеенков Владимир Ильич"
           >
             <div className="info_logo">
               <Avatar
                 position="-63px -51px"
-                url="./photo/001-volodya.png"
+                url="/photo/001-volodya.png"
                 size={261}
               />
             </div>
@@ -87,7 +89,7 @@ const Navigation = () => {
             </div>
             <div className="info_life">03.02.1937-04.07.2012</div>
             <div className="info_age">75 лет</div>
-          </a>
+          </NavLink>
         </div>
         <NavigationMenu items={items} />
       </div>
