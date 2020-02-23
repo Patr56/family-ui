@@ -22,7 +22,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run build
-    - run: npm test --passWithNoTests
 
     - name: GitHub Pages Deploy
       uses: peaceiris/actions-gh-pages@v3.2.0
