@@ -6,10 +6,12 @@ import { IItemMenu, EType } from '../../../models/Models';
 import './NavigationMenu.css';
 
 interface IProps {
+    id: number;
     items: IItemMenu[];
 }
 
 interface IWidgetProps {
+    id: number;
     item: IItemMenu;
 }
 
@@ -24,20 +26,20 @@ const widgetHandlers: { [key in EType]: IItem } = {
     [EType.BIO]: {
         className: 'menu_logo__book',
         ItemWidget: (props) => {
-            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/bio/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
+            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/bio/${props.id}/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
         }
     },
     [EType.GALLERY]: {
         className: 'menu_logo__gallery',
         ItemWidget: (props) => {
-            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/gallery/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
+            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/gallery/${props.id}/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
         },
         descriptionConverter: (d) => `${d} шт.`
     },
     [EType.MAP]: {
         className: 'menu_logo__map',
         ItemWidget: (props) => {
-            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/map/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
+            return <NavLink className="menu_wrapper link" activeClassName="menu_wrapper__active" to={`/map/${props.id}/${props.item.id}`} title={props.item.title}>{props.children}</NavLink>
         }
     },
     [EType.PHONE]: {
@@ -70,7 +72,7 @@ const NavigationMenu = (props: IProps) => {
 
                 return (
                     <li key={item.id} className="menu_item">
-                        <ItemWidget item={item}>
+                        <ItemWidget id={props.id} item={item}>
                             <div className={`menu_logo ${className}`}></div>
                             <div className="menu_item-name">
                                 <div className="menu_item-name-title">{item.title}</div>

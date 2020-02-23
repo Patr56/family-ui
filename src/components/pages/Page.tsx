@@ -14,13 +14,13 @@ export default function Page() {
                 <Route exact path="/">
                     <Tree />
                 </Route>
-                <Route path="/bio/:id">
+                <Route path="/bio/:userId/:id">
                     <Bio />
                 </Route>
-                <Route path="/gallery/:id">
+                <Route path="/gallery/:userId/:id">
                     <Gallery />
                 </Route>
-                <Route path="/map/:id">
+                <Route path="/map/:userId/:id">
                     <Map />
                 </Route>
                 <Route path="*">

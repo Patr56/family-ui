@@ -91,7 +91,7 @@ const Navigation = () => {
             <div className="info_age">75 лет</div>
           </NavLink>
         </div>
-        <NavigationMenu items={items} />
+        <NavigationMenu id={1} items={items} />
       </div>
     </nav>
   )

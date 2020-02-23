@@ -13,3 +13,8 @@ export interface IItemMenu {
     title: string,
     description?: string
 }
+
+export interface INavigationProps {
+    id: string;
+    userId: string;
+}

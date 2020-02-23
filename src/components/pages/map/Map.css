@@ -1,14 +1,14 @@
-.bio {
+.map {
     padding: 1em 0;
     margin: 0;
 }
 
-.bio_header {
+.map_header {
     padding: 0 1em;
     margin: 0;
 }
 
-.bio_body {
-    padding: 0 1em;
+.map_body {
+    padding: 0;
     margin: 0;
 }

@@ -4,8 +4,10 @@ import ReactMarkdown from "react-markdown/with-html";
 
 import "./Bio.css";
 
-interface IBioRoute {
-    id: string
+import { INavigationProps } from "../../../models/Models";
+
+interface IBioRoute extends INavigationProps {
+
 }
 
 const markdown = `
@@ -13,15 +15,17 @@ This block of Markdown contains <a href="https://en.wikipedia.org/wiki/HTML">HTM
 AST plugin to be loaded, in addition to setting the <code class="prop">escapeHtml</code> property to false.
 `
 
-
 export function Bio(prop: RouteComponentProps<IBioRoute>) {
     return (
         <div className="bio">
-            <h2>Биография для {prop.match.params.id}</h2>
-            <ReactMarkdown
-                source={markdown}
-                escapeHtml={false}
-            />
+            <h2 className="bio_header">Биография для пользователя {prop.match.params.userId}</h2>
+            <div className="bio_body">
+                <ReactMarkdown
+                    source={markdown}
+                    escapeHtml={false}
+                />
+            </div>
+
         </div>
     );
 }
