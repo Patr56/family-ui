@@ -23,20 +23,20 @@ const widgetHandlers: { [key in EType]: IItem } = {
     [EType.BIO]: {
         className: 'menu_logo__book',
         ItemWidget: (props) => {
-            return <a className="link" href="#" title={props.item.title}>{props.children}</a>
+            return <a className="link" href="#none" title={props.item.title}>{props.children}</a>
         }
     },
     [EType.GALLERY]: {
         className: 'menu_logo__gallery',
         ItemWidget: (props) => {
-            return <a className="link" href="#" title={props.item.title}>{props.children}</a>
+            return <a className="link" href="#none" title={props.item.title}>{props.children}</a>
         },
         descriptionConverter: (d) => `${d} шт.`
     },
     [EType.MAP]: {
         className: 'menu_logo__map',
         ItemWidget: (props) => {
-            return <a className="link" href="#" title={props.item.title}>{props.children}</a>
+            return <a className="link" href="#none" title={props.item.title}>{props.children}</a>
         }
     },
     [EType.PHONE]: {
@@ -55,7 +55,7 @@ const widgetHandlers: { [key in EType]: IItem } = {
     [EType.DATE]: {
         className: 'menu_logo__date',
         ItemWidget: (props) => {
-            return <a className="link" href="#" title={props.item.title}>{props.children}</a>
+            return <a className="link" href="#none" title={props.item.title}>{props.children}</a>
         },
     }
 }
