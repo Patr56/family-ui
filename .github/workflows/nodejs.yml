@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm run build | cp ./CNAME ./build/CNAME
+    - run: npm run build
     - run: npm test
     - name: GitHub Pages Deploy
       uses: peaceiris/actions-gh-pages@v3.2.0
