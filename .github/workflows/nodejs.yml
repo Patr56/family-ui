@@ -25,10 +25,11 @@ jobs:
     - run: npm test
     - name: GitHub Pages Deploy
       uses: peaceiris/actions-gh-pages@v3.2.0
-      deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-      publish_dir: ./build
-      allow_empty_commit: true
-      publish_branch: gh-pages # deploying branch
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./build
+        publish_branch: gh-pages # deploying branch
+        allow_empty_commit: true
   
       env:
         CI: true
