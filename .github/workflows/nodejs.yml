@@ -1,4 +1,4 @@
-name: Node.js CI
+name: family-ui CI
 
 on: [push]
 
@@ -18,8 +18,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm test
     - run: npm run build
+    - run: npm test
   
       env:
         CI: true
