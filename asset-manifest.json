@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5bac8fb.chunk.css",
-    "main.js": "/static/js/main.e5820ccd.chunk.js",
-    "main.js.map": "/static/js/main.e5820ccd.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2b96b210.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2b96b210.js.map",
-    "static/js/2.ec71b70f.chunk.js": "/static/js/2.ec71b70f.chunk.js",
-    "static/js/2.ec71b70f.chunk.js.map": "/static/js/2.ec71b70f.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.7731439c6560d15029190cbbf57ab51e.js": "/precache-manifest.7731439c6560d15029190cbbf57ab51e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.b5bac8fb.chunk.css.map": "/static/css/main.b5bac8fb.chunk.css.map",
-    "static/js/2.ec71b70f.chunk.js.LICENSE.txt": "/static/js/2.ec71b70f.chunk.js.LICENSE.txt",
-    "static/media/NavigationMenu.css": "/static/media/mobile-alt-solid.0c6a5d8d.svg",
-    "static/media/App.css": "/static/media/bg.a4595829.svg"
+    "main.css": "/family-ui/static/css/main.ac34579a.chunk.css",
+    "main.js": "/family-ui/static/js/main.5ed28b11.chunk.js",
+    "main.js.map": "/family-ui/static/js/main.5ed28b11.chunk.js.map",
+    "runtime-main.js": "/family-ui/static/js/runtime-main.79fa9e31.js",
+    "runtime-main.js.map": "/family-ui/static/js/runtime-main.79fa9e31.js.map",
+    "static/js/2.ec71b70f.chunk.js": "/family-ui/static/js/2.ec71b70f.chunk.js",
+    "static/js/2.ec71b70f.chunk.js.map": "/family-ui/static/js/2.ec71b70f.chunk.js.map",
+    "index.html": "/family-ui/index.html",
+    "precache-manifest.c39ed054f93598eaa9e71970e0d7238f.js": "/family-ui/precache-manifest.c39ed054f93598eaa9e71970e0d7238f.js",
+    "service-worker.js": "/family-ui/service-worker.js",
+    "static/css/main.ac34579a.chunk.css.map": "/family-ui/static/css/main.ac34579a.chunk.css.map",
+    "static/js/2.ec71b70f.chunk.js.LICENSE.txt": "/family-ui/static/js/2.ec71b70f.chunk.js.LICENSE.txt",
+    "static/media/NavigationMenu.css": "/family-ui/static/media/mobile-alt-solid.0c6a5d8d.svg",
+    "static/media/App.css": "/family-ui/static/media/bg.a4595829.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2b96b210.js",
+    "static/js/runtime-main.79fa9e31.js",
     "static/js/2.ec71b70f.chunk.js",
-    "static/css/main.b5bac8fb.chunk.css",
-    "static/js/main.e5820ccd.chunk.js"
+    "static/css/main.ac34579a.chunk.css",
+    "static/js/main.5ed28b11.chunk.js"
   ]
 }
