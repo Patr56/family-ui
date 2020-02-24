@@ -3,17 +3,17 @@ import { withRouter, RouteComponentProps } from "react-router-dom";
 
 import { INavigationProps } from "../../../models/Models";
 
-import "./Tree.css";
+import "./TreePage.css";
 
-interface ITreeRoute {
-
-}
-
-interface IProps extends RouteComponentProps<ITreeRoute> {
+interface ITreePageRoute {
 
 }
 
-export function Tree(prop: IProps) {
+interface IProps extends RouteComponentProps<ITreePageRoute> {
+
+}
+
+export function TreePage(prop: IProps) {
     return (
         <div className="tree">
         <h2 className="tree_header">Семейное древо</h2>
@@ -23,4 +23,4 @@ export function Tree(prop: IProps) {
     );
 }
 
-export default withRouter(Tree)
+export default withRouter(TreePage)

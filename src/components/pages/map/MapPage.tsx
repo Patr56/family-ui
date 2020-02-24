@@ -3,13 +3,13 @@ import { withRouter, RouteComponentProps } from "react-router-dom";
 
 import { INavigationProps } from "../../../models/Models";
 
-import "./Map.css";
+import "./MapPage.css";
 
-interface IMapRoute extends INavigationProps {
+interface IMapPageRoute extends INavigationProps {
 
 }
 
-export function Map(prop: RouteComponentProps<IMapRoute>) {
+export function MapPage(prop: RouteComponentProps<IMapPageRoute>) {
     return (
         <div className="map">
         <h2 className="map_header">Карта для {prop.match.params.userId} с кодом {prop.match.params.id}</h2>
@@ -19,4 +19,4 @@ export function Map(prop: RouteComponentProps<IMapRoute>) {
     );
 }
 
-export default withRouter(Map)
+export default withRouter(MapPage)

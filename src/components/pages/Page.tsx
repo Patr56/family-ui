@@ -1,30 +1,30 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Bio from "./bio/Bio";
-import Gallery from "./gallery/Gallery";
-import Map from "./map/Map";
-import Tree from "./tree/Tree";
-import NoMatch from "./nomatch/NoMatch";
+import BioPage from "./bio/BioPage";
+import GalleryPage from "./gallery/GalleryPage";
+import MapPage from "./map/MapPage";
+import TreePage from "./tree/TreePage";
+import NoMatchPage from "./nomatch/NoMatchPage";
 
 export default function Page() {
     return (
         <main className="main">
             <Switch>
                 <Route exact path="/">
-                    <Tree />
+                    <TreePage />
                 </Route>
                 <Route path="/bio/:userId/:id">
-                    <Bio />
+                    <BioPage />
                 </Route>
                 <Route path="/gallery/:userId/:id">
-                    <Gallery />
+                    <GalleryPage />
                 </Route>
                 <Route path="/map/:userId/:id">
-                    <Map />
+                    <MapPage />
                 </Route>
                 <Route path="*">
-                    <NoMatch />
+                    <NoMatchPage />
                 </Route>
             </Switch>
         </main>

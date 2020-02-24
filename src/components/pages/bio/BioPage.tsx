@@ -2,11 +2,11 @@ import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import ReactMarkdown from "react-markdown/with-html";
 
-import "./Bio.css";
+import "./BioPage.css";
 
 import { INavigationProps } from "../../../models/Models";
 
-interface IBioRoute extends INavigationProps {
+interface IBioPageRoute extends INavigationProps {
 
 }
 
@@ -15,7 +15,7 @@ This block of Markdown contains <a href="https://en.wikipedia.org/wiki/HTML">HTM
 AST plugin to be loaded, in addition to setting the <code class="prop">escapeHtml</code> property to false.
 `
 
-export function Bio(prop: RouteComponentProps<IBioRoute>) {
+export function BioPage(prop: RouteComponentProps<IBioPageRoute>) {
     return (
         <div className="bio">
             <h2 className="bio_header">Биография для пользователя {prop.match.params.userId}</h2>
@@ -30,4 +30,4 @@ export function Bio(prop: RouteComponentProps<IBioRoute>) {
     );
 }
 
-export default withRouter(Bio)
+export default withRouter(BioPage)

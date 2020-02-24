@@ -1,14 +1,13 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import jsonp from "jsonp";
 import { withRouter, RouteComponentProps } from "react-router-dom";
-import PhotoGallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
 
+import Gallery from "../../gallery/Gallery";
 import { INavigationProps } from "../../../models/Models";
 
-import "./Gallery.css";
+import "./GalleryPage.css";
 
-interface IGalleryRoute extends INavigationProps {
+interface IGalleryPageRoute extends INavigationProps {
 
 }
 
@@ -51,44 +50,18 @@ function loadPhotos(cb: (photos: any) => void) {
 
 }
 
-export function Gallery(prop: RouteComponentProps<IGalleryRoute>) {
-    const [currentImage, setCurrentImage] = useState(0);
-    const [viewerIsOpen, setViewerIsOpen] = useState(false);
+export function GalleryPage(prop: RouteComponentProps<IGalleryPageRoute>) {
     const [photos, setPhotos] = useState([]);
 
     loadPhotos(photos => setPhotos(photos))
-
-    const openLightbox = useCallback((event, { photo, index }) => {
-        setCurrentImage(index);
-        setViewerIsOpen(true);
-    }, []);
-
-    const closeLightbox = () => {
-        setCurrentImage(0);
-        setViewerIsOpen(false);
-    };
 
     return (
         <div className="gallery">
             <h2 className="gallery_header">Галерея {prop.match.params.userId} с кодом {prop.match.params.id}</h2>
             <div className="gallery_body">
-                <PhotoGallery photos={photos} onClick={openLightbox} />
-                <ModalGateway>
-                    {viewerIsOpen ? (
-                        <Modal onClose={closeLightbox}>
-                            <Carousel
-                                currentIndex={currentImage}
-                                views={photos.map((x: any) => ({
-                                    ...x,
-                                    srcset: x.srcSet,
-                                    caption: x.title,
-                                }))}
-                            />
-                        </Modal>
-                    ) : null}
-                </ModalGateway>
+                <Gallery photos={photos} />
             </div>
         </div>);
 }
 
-export default withRouter(Gallery);
+export default withRouter(GalleryPage);
