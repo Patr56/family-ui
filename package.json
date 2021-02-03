@@ -19,12 +19,17 @@
   },
   "homepage": "https://github.com/Patr56/family-ui#readme",
   "devDependencies": {
+    "@types/d3-hierarchy": "^2.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^5.0.0-beta.6",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "mini-css-extract-plugin": "^1.3.5",
     "style-loader": "^2.0.0",
+    "ts-import-plugin": "^1.6.7",
     "ts-loader": "^8.0.14",
     "typescript": "^4.1.3",
     "webpack": "^5.19.0",
@@ -36,7 +41,7 @@
   "dependencies": {
     "antd": "^4.12.0",
     "react": "^17.0.1",
-    "react-d3-tree": "^2.0.1",
+    "react-d3-tree": "^2.0.0",
     "react-dom": "^17.0.1"
   }
 }
