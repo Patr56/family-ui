@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 export interface FrameProps {
   accessibility?: boolean;
-  autoSize?: boolean | 'width' | 'height';
+  autoSize?: boolean | "width" | "height";
   springConfig?: { [key: string]: number };
   tag?: string;
 }
@@ -19,8 +19,8 @@ export interface Formatters {
 
 export interface TrackProps {
   align?: number;
-  animations?: Array<{ props: string, stops: Array<[number, number]> }>;
-  axis?: 'x' | 'y';
+  animations?: Array<{ props: string; stops: Array<[number, number]> }>;
+  axis?: "x" | "y";
   contain?: boolean;
   currentView?: any;
   flickTimeout?: number;
@@ -33,21 +33,23 @@ export interface TrackProps {
   onSwipeStart?: () => void;
   onViewChange?: (view: number) => void;
   springConfig?: { [key: string]: number };
-  swipe?: boolean| 'mouse' | 'touch';
+  swipe?: boolean | "mouse" | "touch";
   swipeThreshold?: number;
   tag?: any;
   viewsToMove?: number;
-  viewsToShow?: number | 'auto';
+  viewsToShow?: number | "auto";
 }
 
 export interface ViewType {
   caption?: React.ReactNode;
-  source: string | {
-    download?: string;
-    fullscreen?: string;
-    regular: string;
-    thumbnail?: string;
-  };
+  source:
+    | string
+    | {
+        download?: string;
+        fullscreen?: string;
+        regular: string;
+        thumbnail?: string;
+      };
 }
 
 export interface CarouselModalProps {
@@ -86,17 +88,17 @@ export interface CommonProps {
 }
 
 export type Components = {
-  Container?: React.ComponentType<CommonProps>,
-  Footer?: React.ComponentType<CommonProps>,
-  FooterCaption?: React.ComponentType<CommonProps>,
-  FooterCount?: React.ComponentType<CommonProps>,
-  Header?: React.ComponentType<CommonProps>,
-  HeaderClose?: React.ComponentType<CommonProps>,
-  HeaderFullscreen?: React.ComponentType<CommonProps>,
-  Navigation?: React.ComponentType<CommonProps>,
-  NavigationPrev?: React.ComponentType<CommonProps>,
-  NavigationNext?: React.ComponentType<CommonProps>,
-  View?: React.ComponentType<CommonProps>,
+  Container?: React.ComponentType<CommonProps>;
+  Footer?: React.ComponentType<CommonProps>;
+  FooterCaption?: React.ComponentType<CommonProps>;
+  FooterCount?: React.ComponentType<CommonProps>;
+  Header?: React.ComponentType<CommonProps>;
+  HeaderClose?: React.ComponentType<CommonProps>;
+  HeaderFullscreen?: React.ComponentType<CommonProps>;
+  Navigation?: React.ComponentType<CommonProps>;
+  NavigationPrev?: React.ComponentType<CommonProps>;
+  NavigationNext?: React.ComponentType<CommonProps>;
+  View?: React.ComponentType<CommonProps>;
 };
 
 export interface CarouselState {
@@ -106,16 +108,40 @@ export interface CarouselState {
 }
 
 export interface CarouselStyles {
-  container?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
+  container?(
+    base: React.CSSProperties,
+    state: CarouselState
+  ): React.CSSProperties;
   footer?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
-  footerCaption?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
-  footerCount?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
+  footerCaption?(
+    base: React.CSSProperties,
+    state: CarouselState
+  ): React.CSSProperties;
+  footerCount?(
+    base: React.CSSProperties,
+    state: CarouselState
+  ): React.CSSProperties;
   header?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
-  headerClose?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
-  headerFullscreen?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
-  navigation?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
-  navigationPrev?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
-  navigationNext?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
+  headerClose?(
+    base: React.CSSProperties,
+    state: CarouselState
+  ): React.CSSProperties;
+  headerFullscreen?(
+    base: React.CSSProperties,
+    state: CarouselState
+  ): React.CSSProperties;
+  navigation?(
+    base: React.CSSProperties,
+    state: CarouselState
+  ): React.CSSProperties;
+  navigationPrev?(
+    base: React.CSSProperties,
+    state: CarouselState
+  ): React.CSSProperties;
+  navigationNext?(
+    base: React.CSSProperties,
+    state: CarouselState
+  ): React.CSSProperties;
   view?(base: React.CSSProperties, state: CarouselState): React.CSSProperties;
 }
 

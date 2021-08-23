@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -15,22 +14,22 @@ jobs:
         node-version: [10.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run build
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run build
 
-    - name: GitHub Pages Deploy
-      uses: peaceiris/actions-gh-pages@v3.2.0
-      with:
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./build
-        publish_branch: gh-pages # deploying branch
-        allow_empty_commit: true
-        keep_files: false
-  
-      env:
-        CI: true
+      - name: GitHub Pages Deploy
+        uses: peaceiris/actions-gh-pages@v3.2.0
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./build
+          publish_branch: gh-pages # deploying branch
+          allow_empty_commit: true
+          keep_files: false
+
+        env:
+          CI: true
