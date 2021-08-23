@@ -1,8 +1,6 @@
 import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 
-import { INavigationProps } from "../../../models/Models";
-
 import "./TreePage.css";
 
 interface ITreePageRoute {}

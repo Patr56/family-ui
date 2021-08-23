@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
-import ReactMarkdown from "react-markdown/with-html";
 
 import "./BioPage.css";
 
@@ -19,9 +18,7 @@ export function BioPage(prop: RouteComponentProps<IBioPageRoute>) {
       <h2 className="bio_header">
         Биография для пользователя {prop.match.params.userId}
       </h2>
-      <div className="bio_body">
-        <ReactMarkdown source={markdown} escapeHtml={false} />
-      </div>
+      <div className="bio_body">{markdown}</div>
     </div>
   );
 }
