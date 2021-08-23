@@ -1,11 +1,11 @@
 .avatar {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  width: 8em;
-  height: 8em;
-  overflow: hidden;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  filter: drop-shadow(-1px 3px 2px rgba(0, 0, 0, 0.57));
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 8em;
+    height: 8em;
+    overflow: hidden;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-1px 3px 2px rgba(0, 0, 0, 0.57));
 }
