@@ -1,19 +1,19 @@
 .menu {
-    list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .menu_item {
-    vertical-align: bottom;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    vertical-align: bottom;
 }
 
 .menu_wrapper {
     display: block;
-    padding: 1em;
     margin: 0;
+    padding: 1em;
 }
 
 .menu_wrapper__active {
@@ -24,12 +24,12 @@
     display: inline-block;
     width: 3em;
     height: 3em;
+    margin: 0;
+    padding: 0;
     vertical-align: middle;
     background-repeat: no-repeat;
     opacity: 0.5;
     filter: drop-shadow(-1px 3px 2px rgba(0, 0, 0, 0.57));
-    margin: 0;
-    padding: 0;
 }
 
 .menu_logo__book {
@@ -60,16 +60,16 @@
 
 .menu_item-name {
     display: inline-block;
+    width: 80%;
+    padding: 0 0 0 1em;
     font-weight: bold;
     vertical-align: middle;
-    padding: 0 0 0 1em;
-    width: 80%;
 }
 
 .menu_item-name-descripton {
-    font-weight: normal;
-    font-size: 1.4em;
     padding: 0.3em 0 0 0;
     overflow: hidden;
+    font-weight: normal;
+    font-size: 1.4em;
     text-overflow: ellipsis;
 }
